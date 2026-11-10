@@ -1,5 +1,5 @@
-// import React, { useEffect, useRef, useState } from "react";
-// import { MdAttachFile, MdSend } from "react-icons/md";
+// import { useEffect, useRef, useState } from "react";
+// import { MdSend } from "react-icons/md";
 // import useChatContext from "../context/ChatContext";
 // import { useNavigate } from "react-router";
 // import SockJS from "sockjs-client";
@@ -225,8 +225,8 @@
 // export default ChatPage;
 
 
-import React, { useEffect, useRef, useState } from "react";
-import { MdAttachFile, MdSend } from "react-icons/md";
+import { useEffect, useRef, useState } from "react";
+import { MdSend } from "react-icons/md";
 import useChatContext from "../context/ChatContext";
 import { useNavigate } from "react-router";
 import SockJS from "sockjs-client";
@@ -463,20 +463,12 @@ const ChatPage = () => {
             }}
             type="text"
             placeholder="Type your message here..."
-            className="w-full dark:bg-gray-800 px-5 py-2 rounded-full h-full focus:outline-none"
+            className="w-full flex-1 dark:bg-gray-800 px-5 py-2 rounded-full h-full focus:outline-none"
           />
 
           <button
-            type="button"
-            className="bg-purple-600 h-10 w-10 shrink-0 flex justify-center items-center rounded-full text-white"
-            title="Attach file"
-          >
-            <MdAttachFile size={20} />
-          </button>
-
-          <button
             onClick={sendMessage}
-            className="bg-green-600 h-10 w-10 shrink-0 flex justify-center items-center rounded-full text-white"
+            className="bg-green-600 h-10 w-10 shrink-0 flex justify-center items-center rounded-full text-white hover:bg-green-700 transition-colors"
             title="Send message"
           >
             <MdSend size={20} />
