@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import chatIcon from "../assets/chat.png";
 import toast from "react-hot-toast";
 import { createRoomApi, joinChatApi } from "../services/RoomService";
@@ -10,8 +10,7 @@ const JoinCreateChat = () => {
     userName: "",
   });
 
-  const { roomId, userName, setRoomId, setCurrentUser, setConnected } =
-    useChatContext();
+  const { setRoomId, setCurrentUser, setConnected } = useChatContext();
   const navigate = useNavigate();
 
   function handleFormInputChange(event) {
